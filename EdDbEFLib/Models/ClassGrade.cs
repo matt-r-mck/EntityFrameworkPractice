@@ -5,8 +5,7 @@ namespace EdDbEFLib.models
 {
     public partial class ClassGrade
     {
-        public ClassGrade()
-        {
+        public ClassGrade() {
             StudentClass = new HashSet<StudentClass>();
         }
 

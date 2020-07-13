@@ -22,13 +22,13 @@ namespace EdDbEFLib.Controllers {
         }
 
         public async Task<bool> InsertAsync (Major major) {
-            NewMethod(major);
+            CheckNull(major);
             await _context.Major.AddAsync(major);
             await _context.SaveChangesAsync();
             return true;
         }
 
-        private static void NewMethod(Major major) {
+        private static void CheckNull(Major major) {
             if (major == null) {
                 throw new Exception("Major input cannot be null.");
             }
